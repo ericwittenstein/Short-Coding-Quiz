@@ -2,29 +2,47 @@
 var timerEl = document.querySelector("#timeLeft");
 var questionsEl = document.querySelector("#questionBox");
 var choicesEl = document.querySelector("#choices");
-var submitBtn = document.querySelector("#submitBtn");
-var startBtn = document.querySelector("#startBtn");
+var submitBtnEl = document.querySelector("#submitBtn");
+var startBtnEl = document.querySelector("#startBtn");
 var initialsEl = document.querySelector("#initials");
+var welcomeEl = document.getElementById("welcome");
 
 var currentQ = 0;
 var time = 180;
 var timerId;
 
 function startQuiz() {
-    // hide start screen
-    var welcomeEl = document.getElementById("welcome");
-    welcomeEl.setAttribute("class", "hide");
-  
-    // un-hide questions section
-    questionsEl.removeAttribute("class");
-  
-    // start timer
-    timerId = setInterval(clockTick, 1000);
-  
-    // show starting time
+    // first hide the welcome box
+    welcomeEl.setAttribute("class", "contentHide");
+
+    // next unhide the questions box
+    questionsEl.setAttribute("class", "content");
+
+    // set the timer using the timeCountDown function with interval 1000ms aka 1 sec
+    timerId = setInterval(timeCountDown, 1000);
+
+    // set the text of the timer to the time that will now be counting down
     timerEl.textContent = time;
-  
     getQuestion();
+}
+
+function timeCountDown() {
+    // de-increment (decrement?) timer
+    time--;
+    timerEl.textContent = time;
+
+    // if the timer reaches zero
+    if (time <= 0) {
+        quizOver();
+    }
+}
+
+getQuestion() {
+
+}
+
+quizOver() {
+    
 }
 
 // list of questions pulled from google
@@ -55,3 +73,6 @@ var questions = [
         answer: "Callback functions"
     }
 ];
+
+// when start putton is pressed
+startBtnEl.onclick = startQuiz;

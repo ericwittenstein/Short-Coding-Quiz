@@ -52,6 +52,6 @@ welcome p {
     border-radius: 2%;
 }
 
-.hide {
+.contentHidden {
     display: none;
 }

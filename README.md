@@ -3,12 +3,9 @@
 
 ## Having read the instructions, I have, to the best of my abilities, done the following:
 
-- XXX
-- added screenshots and links to this readme
-- pushed my files to GitHub and deployed them to a live site through GitHub
-- submitted the deployed application URL and GitHub repo to BCS for review and grading
+- frankly i gave up on this one. I'm not happy about it but it's been giving me problems and I need to move on to the next assignment. i'm told its more important to keep up than to worry about one assignment and fall behind, so here we are. have a great weekend.
 
-[URL of Deployed Application](https://ericwittenstein.github.io/Unit-4-Challenge/)
+[URL of Deployed Application]()
 
 ![screen recording of functional deployed site]()
 
