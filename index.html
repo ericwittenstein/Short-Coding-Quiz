@@ -1,23 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Unit 4 Coding Quiz</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="stylesheet" href="./assets/style.css" />
+  <title>Unit 4 Coding Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-  <div class="header">
-    <h1 class="start-header">Coding Quiz!</h1>
-  </div>
+  <highScores>
+    <a href="./highScores.html">View Current High Scores</a>
+  </highScores>
 
-  <div class="welcome">
-    <p class="welcome-text">Test your knowledge of basic Javascript with this quiz! Questions are all multiple choice, and you'll have 3 minutes (180 seconds) to answer them all correctly! Incorrect answers will result in a loss of 10 seconds from your timers, which is also your score! At the end, be sure to save your results so you can compare with your friends!</p>
-    <button class="start-button">Start</button>
-  </div>
+  <timer>
+    Time Remaining: <span id="timeLeft">0</span> seconds
+  </timer>
 
-  <script src="./assets/script.js"></script>
+  <welcome id="welcome" class="content">
+    <h2>Coding Quiz!</h2>
+    <p class="welcomeText">Test your knowledge of basic Javascript with this quiz! Questions are all multiple choice, and you'll have 3 minutes (180 seconds) to answer them all correctly! Incorrect answers will result in a loss of 10 seconds from your timers, which is also your score! At the end, be sure to save your results so you can compare with your friends!</p>
+    <button id="startBtn">Start</button>
+  </welcome>
+
+  <questionBox id="questionBox" class="content hide">
+    <h3 id="question"></h3>
+    <div id="choices"></div>
+  </questionBox>
+
+  <endBox id="end-screen" class="content hide">
+    <h2>Congratulations, you made it through!</h2>
+    <p>You finished with a final score of <span id="finalScore"></span>.</p>
+    <p>
+      Enter your initials: <input type="text" id="initials" max="3" />
+      <button id="submitBtn">Submit</button>
+    </p>
+  </endBox>
+
+  <script src="./assets/js/questionSet.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

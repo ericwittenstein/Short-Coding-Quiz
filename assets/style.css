@@ -1,0 +1,57 @@
+:root {
+    font-family: 'Molengo', sans-serif;
+    box-sizing: border-box;
+    --primary-color: #4b9cd3;
+    --accent-color: #13294B;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: align-center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+highScores {
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    font-size: large;
+}
+
+highScores a {
+    color: white;
+    text-decoration: none;
+}
+
+timer {
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    font-size: large;
+}
+
+welcome {
+    font-size: x-large;
+}
+
+welcome h2 {
+    margin: 20px auto;
+}
+
+welcome p {
+    margin: 10px auto;
+}
+
+.content {
+    background-color: var(--accent-color);
+    margin: auto 1%;
+    padding: 2%;
+    border-radius: 2%;
+}
+
+.hide {
+    display: none;
+}
